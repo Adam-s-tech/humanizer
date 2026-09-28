@@ -1,33 +1,63 @@
 # Humanizer
 
-[![skills.sh installs](https://skills.sh/b/blader/humanizer)](https://skills.sh/blader/humanizer)
+[![GitHub stars](https://img.shields.io/github/stars/blader/humanizer?style=flat)](https://github.com/blader/humanizer/stargazers) [![skills.sh installs](https://skills.sh/b/blader/humanizer)](https://skills.sh/blader/humanizer)
 
-Humanizer rewrites AI-sounding text so it reads like a person wrote it, without changing what it says. Because it is just Markdown, it works with any agent that supports skills.
+Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, Cursor, OpenCode, and any other agent that supports skills.
+
+**Before:**
+> I'm thrilled to announce that after months of hard work, our team has shipped something truly special — shared drafts. It's not just a feature; it's a fundamental shift in how teams collaborate. Now two people can edit the same doc at once, seamlessly. We built it because our own team kept emailing each other files named final_v7.docx. Let that sink in. 🚀
+
+**After:**
+> Our own team kept emailing each other files named final_v7.docx, so we spent the last few months building shared drafts. They're live today: two people can now edit the same doc at once.
+
+In a blind test, judges preferred Humanizer's rewrite over the original AI text 16 times out of 16 ([#229](https://github.com/blader/humanizer/issues/229)).
 
 Humanizer edits for human readers. Getting past AI detectors is not a goal, and detectors still flag most of its output.
 
 ## Installation
 
-Install Humanizer with the Skills CLI:
+Once installed, the skill answers to `/humanizer`.
 
-```bash
-npx skills add blader/humanizer --global
-```
-
-Leave off `--global` to install Humanizer only in the current project. Add `--agent <name>` or `--agent '*'` to choose which agents receive it, then reload their skills. The skill answers to `/humanizer`.
-
-Claude Code 2.1.142 or newer can install the plugin instead:
+### Claude Code
 
 ```text
 /plugin marketplace add blader/humanizer
 /plugin install humanizer@humanizer
 ```
 
-The plugin answers to `/humanizer:humanizer`.
+The plugin answers to `/humanizer:humanizer`. It needs Claude Code 2.1.142 or newer; on older versions, use `npx skills add blader/humanizer --global --agent claude-code`.
 
-Cursor can load this repository as a plugin. Copy or symlink it into `~/.cursor/plugins/local/humanizer`, then reload Cursor. The skill answers to `/humanizer`.
+### Codex
 
-In Claude Desktop, download this repository as a ZIP and upload it as a skill. For a manual install, copy `SKILL.md` into the agent's skill folder.
+```bash
+npx skills add blader/humanizer --global --agent codex
+```
+
+### Cursor
+
+```bash
+npx skills add blader/humanizer --global --agent cursor
+```
+
+To load it as a Cursor plugin instead, copy or symlink this repository into `~/.cursor/plugins/local/humanizer` and reload Cursor.
+
+### OpenCode
+
+```bash
+npx skills add blader/humanizer --global --agent opencode
+```
+
+### Claude.ai and Claude Desktop
+
+Download this repository as a ZIP (**Code → Download ZIP**) and upload it as a skill in Settings.
+
+### Other agents
+
+```bash
+npx skills add blader/humanizer --global --agent '*'
+```
+
+This installs Humanizer for every agent the Skills CLI supports, including Gemini CLI, GitHub Copilot, and Windsurf. Leave off `--global` in any command above to install it only in the current project. For an agent the Skills CLI does not know, copy `SKILL.md` into its skill folder.
 
 ## Usage
 
@@ -174,3 +204,5 @@ See [CHANGELOG.md](CHANGELOG.md).
 ## License
 
 MIT
+
+If Humanizer helps you, a star helps other people find it.
