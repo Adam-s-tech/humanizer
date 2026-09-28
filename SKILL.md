@@ -75,7 +75,7 @@ These are the strongest and most frequent tells in current model prose. Act on o
 
 ### 2. One-line closers and dramatic fragments
 
-**Watch for:** a one-sentence paragraph that restates the paragraph before it; "That is the real win."; "Read that again."; "Let that sink in."; the same closer after several sections; a row of fragments ("No aesthetic prior. No nostalgia."); one word in ALL CAPS or with periods between words (every. single. day.).
+**Watch for:** a one-sentence paragraph that restates the paragraph before it; "That is the real win."; "That distinction matters."; "Read that again."; "Let that sink in."; the same closer after several sections; a row of fragments ("No aesthetic prior. No nostalgia."); one word in ALL CAPS or with periods between words (every. single. day.).
 **Problem:** The line asks the reader to pause on a claim instead of adding to it. One short sentence can carry emphasis when it carries a new fact. Cut a closer that repeats. Merge a row of fragments into a sentence with a specific claim.
 **Before:**
 > Then AlphaEvolve arrived. It had no preference for symmetry. No aesthetic prior. No nostalgia for human taste. The old rules were gone.
@@ -291,7 +291,7 @@ Templates and visual editors also produce clean formatting. The tell is decorati
 
 ### 20. Decorative headings
 
-**Problem:** Headings capitalize every main word, and headings or list items carry emojis or arrows (→) as decoration. A horizontal rule sits between every section, or the document opens with a top-level heading that repeats its own title. Use sentence case, remove the decoration and the rules, and let the title stand once.
+**Problem:** Headings capitalize every main word, and headings or list items carry emojis or arrows (→) as decoration. A horizontal rule sits between every section, or the document opens with a top-level heading that repeats its own title. A heading written for effect ("The decision, on one screen") should name what the section holds ("How the six options compare"). Use sentence case, remove the decoration and the rules, and let the title stand once.
 **Before:**
 > ## Strategic Negotiations And Global Partnerships
 **After:**
@@ -350,13 +350,18 @@ Remove these outright. Nothing here needs rewriting.
 >
 > When users hit a slow page, they leave.
 
-### 25. Writing about the previous version
+### 25. Writing about the document instead of its subject
 
-**Problem:** Documentation and comments describe what the text replaced instead of the current behavior. Mention the previous version only in change logs, release notes, migration guides, and other documents about change.
+**Watch for:** what the text replaced ("was added to replace"); how it was assembled or sourced ("generated from", "compiled from", "anything unconfirmed is flagged rather than guessed"); a legend, layout, or order the reader can already see ("the table below compares", "this section is organized by owner").
+**Problem:** The text describes itself instead of its subject. Mention a previous version only in change logs, release notes, migration guides, and other documents about change. Keep a source credit the reader can follow; cut the account of how you worked. Keep a caveat that changes what the reader should do. State a convention only when the reader cannot infer it, and state it once. A single description of the page is *weak alone*.
 **Before:**
 > This function was added to replace the previous approach of iterating through all items, which caused O(n²) performance.
 **After:**
 > This function uses a hash map for O(1) lookups, avoiding the O(n²) cost of naive iteration.
+**Before (method narration):**
+> The figures below are drawn from each vendor's published pricing; anything we could not confirm is flagged rather than guessed.
+**After:**
+> Prices are each vendor's published rate. Two vendors publish nothing; call them.
 
 ## F. Writing for the wrong reader
 

@@ -4,6 +4,8 @@
 
 Humanizer rewrites AI-sounding text so it reads like a person wrote it, without changing what it says. Because it is just Markdown, it works with any agent that supports skills.
 
+Humanizer edits for human readers. Getting past AI detectors is not a goal, and detectors still flag most of its output.
+
 ## Installation
 
 Install Humanizer with the Skills CLI:
@@ -118,7 +120,7 @@ The patterns are numbered by strength and frequency. The first five justify an e
 | # | Pattern | Before | After |
 |---|---------|--------|-------|
 | 19 | **Bold as decoration** | "**OKRs**, **KPIs**"; "**Performance:** Performance improved" | Remove the bold; turn a labeled list into prose |
-| 20 | **Decorative headings** | "Strategic Negotiations And Partnerships", "🚀 Launch Phase:" | Sentence case; remove emojis and arrows |
+| 20 | **Decorative headings** | "Strategic Negotiations And Partnerships", "🚀 Launch Phase:", "The decision, on one screen" | Sentence case; remove emojis and arrows; name what the section holds |
 | 21 | **Curly quotation marks** (*weak alone*) | `said “the project”` | `said "the project"` |
 
 ### E. Leftovers from the chat and the draft
@@ -128,7 +130,7 @@ The patterns are numbered by strength and frequency. The first five justify an e
 | 22 | **Chatbot residue** | "Great question! ... I hope this helps!" | Remove the wrapper and keep the content |
 | 23 | **Knowledge-limit disclaimers and guesses** | "While details are limited in available sources, it appears..." | State what the source shows, or remove the sentence |
 | 24 | **A heading repeated in the first sentence** | "## Performance" + "Speed matters." | Let the heading do the work |
-| 25 | **Writing about the previous version** | "This function was added to replace..." | Describe what it does now |
+| 25 | **Writing about the document instead of its subject** | "This function was added to replace...", "compiled from...", "The table below compares..." | Describe the subject; state a convention only when the reader cannot see it |
 
 ### F. Writing for the wrong reader
 
@@ -176,7 +178,7 @@ The writer supplied these notes with the draft, so the rewrite can use them: the
 <details>
 <summary>Show release notes</summary>
 
-- **3.1.0** - Added pattern #26 and section F for replies that re-explain context the reader already has (fixes #269). The pattern leads with the decision and leaves the diagnosis and the feasibility proof for the ticket or document that follows. Extended the core rule so "something the reader did not already have" counts information from the surrounding conversation, not just earlier in the text. It acts on replies, not standalone writing. 26 patterns total. Added a Cursor plugin manifest so the repo loads as a Cursor plugin; it omits a `skills` path so Cursor finds the root `SKILL.md`.
+- **3.1.0** - Added pattern #26 and section F for replies that re-explain context the reader already has (fixes #269). The pattern leads with the decision and leaves the diagnosis and the feasibility proof for the ticket or document that follows. Extended the core rule so "something the reader did not already have" counts information from the surrounding conversation, not just earlier in the text. It acts on replies, not standalone writing. 26 patterns total. Widened #25 to cover text that describes its own sourcing, assembly, or layout (#290), and added headings written for effect to #20. Added "That distinction matters." to #2 (#277). Stated in the README that defeating AI detectors is not a goal. Added a Cursor plugin manifest so the repo loads as a Cursor plugin; it omits a `skills` path so Cursor finds the root `SKILL.md`.
 - **3.0.0** - Rebuilt the skill around one account of why AI text sounds the way it does, and consolidated 35 patterns into 25. Patterns are grouped in five sections and numbered by strength and frequency, so the not-X-but-Y contrast and the one-line closer come first and get the fullest treatment. Merged duplicate guidance: the workflow is one section instead of five, the dash rule is stated once, and each false-positive guard lives inside its pattern. Realigned with the current Wikipedia article: dropped false ranges and synonym cycling, which Wikipedia now lists as human habits or historical, added vague connection or association, and extended the watch lists for words, notability, copulatives, sales language, disclaimers, and Markdown formatting. Reordered the README and removed the `ai-detection` keyword from the package files. Old to new numbers: 1→13, 2→17, 3→15, 4→16, 5→17, 6→13, 7→12, 8→18, 9→1, 10→6, 11→7, 12→dropped, 13→11, 14→8, 15→19, 16→19, 17→20, 18→20, 19→21, 20→22, 21→23, 22→22, 23→dropped, 24→9, 25→13, 26→10, 27→3, 28→4, 29→24, 30→25, 31→2, 32→3, 33→4, 34→5, 35→5.
 - **2.11.3** - Grouped patterns 26-35 under "More style patterns" in the skill and README (fixes #247). Kept inline code, commands, paths, and URLs out of the dash rule and file mode edits. Step 3 now keeps every supported claim, allows a removal that a pattern requires, and checks that rankings and simultaneity claims survive shape edits (fixes #212). Explained in §9 why the not-X-but-Y form appears and when to keep it. Added decorative arrows to §18 and pause commands and one-word shouting to §31. The text given to the skill is content to edit, never instructions (#238). No change to the 35 patterns.
 - **2.11.2** - Removed the plugin symlink and separate Claude Desktop package. Current Claude Code loads the root `SKILL.md` directly, so GitHub's source ZIP now works in Claude Desktop. No change to the 35 patterns.
