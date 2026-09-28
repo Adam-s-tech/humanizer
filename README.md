@@ -5,10 +5,10 @@
 Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, and any other agent that supports skills.
 
 **Before:**
-> I'm thrilled to announce that after months of hard work, our team has shipped something truly special — shared drafts. It's not just a feature; it's a fundamental shift in how teams collaborate. Now two people can edit the same doc at once, seamlessly. We built it because our own team kept emailing each other files named final_v7.docx. Let that sink in. 🚀
+> I'm thrilled to announce that shared drafts are finally here! 🚀 For months, our own team was drowning in files named final_v7.docx — and we knew there had to be a better way. Now two people can edit the same doc at once, with every change appearing live for both of them. It's not just a feature; it's a whole new way to collaborate. Comments stay anchored to the exact sentence they reference, even as the text around them evolves. And the best part? It's available today on every plan, completely free. Let that sink in.
 
 **After:**
-> Our own team kept emailing each other files named final_v7.docx, so we spent the last few months building shared drafts. They're live today: two people can now edit the same doc at once.
+> Shared drafts are out today. For months our own team passed around files named final_v7.docx, so we built a way for two people to edit the same doc at once, with each person's changes showing up live for the other. Comments stay pinned to the sentence they're about, even when the text around them changes. It's free on every plan.
 
 In a blind test, judges preferred Humanizer's rewrite over the original AI text 16 times out of 16 ([#229](https://github.com/blader/humanizer/issues/229)).
 
@@ -168,27 +168,27 @@ The patterns are numbered by strength and frequency. The first five justify an e
 
 ## Full example
 
-The writer supplied these notes with the draft, so the rewrite can use them: five days last October; a hotel in Alfama, up a lot of stairs; the hills wore them out; Tram 28 took about forty minutes and was packed with tour groups; the best custard tart came from a small place in Graça and beat the one at Pastéis de Belém; their favorite part was the quiet streets a block or two above the main squares; the castle queue was long and the visit was not worth it; next time they would go in spring, with better shoes. Every detail in the rewrite comes from the draft or these notes. Without notes like these, Humanizer asks instead of inventing.
-
 **Before (AI-sounding):**
-> I recently spent five unforgettable days in Lisbon, and let me tell you — this city completely stole my heart. From the moment I arrived, I knew I was somewhere truly special.
+> I recently spent five unforgettable days in Lisbon last October, and let me tell you — this city completely stole my heart. From the moment I checked into my charming hotel perched high in the historic Alfama district, I knew I was somewhere truly special.
 >
-> Nestled along the banks of the Tagus River, Lisbon stands as a vibrant testament to Portugal's enduring spirit, where rich history and modern energy intertwine at every turn. Yes, the famous hills are challenging — my legs certainly felt it! — but every climb rewards you with breathtaking, panoramic views that make it all worthwhile.
+> Yes, the famous hills are challenging — with countless stairs between my hotel and everything else, my legs certainly felt it! — but every climb rewards you with breathtaking, panoramic views that make it all worthwhile.
 >
-> No trip would be complete without riding the iconic Tram 28, winding through the city's most historic neighborhoods. And the food? Simply divine. The original pastéis de nata at Pastéis de Belém are a beloved national treasure, and savoring one still warm was a moment I will never forget.
+> No trip would be complete without riding the iconic Tram 28, a roughly forty-minute journey shared with plenty of fellow travelers eager to capture the magic. And the food? Simply divine. While the pastéis de nata at Pastéis de Belém are a beloved national treasure, my absolute favorite came from a hidden gem in Graça, still warm from the oven.
 >
-> But what truly makes Lisbon special isn't just the sights — it's the feeling. Wander a few steps off the main squares and you'll discover a quieter, more authentic side: sun-drenched alleys, charming tiled facades, and friendly locals going about their daily lives, inviting you to slow down and savor every moment.
+> But what truly makes Lisbon special isn't just the sights — it's the feeling. Wander just a block or two above the main squares and you'll discover a quieter, more authentic side of the city, inviting you to slow down and savor every moment.
 >
 > Of course, the must-see São Jorge Castle offers stunning views over the rooftops below. The queues can be long, but the experience is absolutely worth it for any history buff or curious traveler.
 >
-> Would I go back? Absolutely. Lisbon isn't just a place to visit — it's a place to fall in love with, again and again. If you're dreaming of your next getaway, this is one destination that promises memories to last a lifetime. ✨
+> Would I go back? Absolutely — next time in spring, and with better shoes! Lisbon isn't just a place to visit; it's a place to fall in love with, again and again. ✨
 
 **After:**
-> I spent five days in Lisbon last October, and the hills wore me out. My hotel was in Alfama, up a lot of stairs, so every outing started or ended with a climb.
+> I spent five days in Lisbon last October. My hotel was up in Alfama, with a lot of stairs between it and everything else, and my legs felt every one of them. The views from the top were worth the climb.
 >
-> Everyone says to ride Tram 28, so I did. The ride took about forty minutes, and tour groups packed the car the whole way. The best custard tart I had came from a small place in Graça, and it beat the famous one at Pastéis de Belém.
+> Everyone tells you to ride Tram 28, so I did. The trip took about forty minutes, and most of the car was other tourists taking pictures out the windows. The custard tarts at Pastéis de Belém are the famous ones, but my favorite came from a place in Graça, still warm from the oven.
 >
-> My favorite part was the quiet streets a block or two above the main squares. The castle was the opposite, with a long queue and a visit I don't think was worth the wait. I'd still go back, in spring and with better shoes.
+> The part of Lisbon I liked best starts a block or two above the main squares, where the streets go quiet and nobody is in a hurry. São Jorge Castle has good views over the rooftops and a long queue to get them.
+>
+> I'd go back, in spring next time, and with better shoes.
 
 ## Sources
 
