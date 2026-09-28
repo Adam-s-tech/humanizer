@@ -9,7 +9,7 @@
 - Narrowed #10 so words the dictionary always hyphenates keep their hyphen. Gave each watched word one pattern, and stated the evidence rule and the no-invention rule once each.
 - Fixed the Voice section's dash reference (#273) and the marketplace schema URL (#288).
 - Added a Cursor plugin manifest (#278).
-- README: stated that defeating AI detectors is not a goal, rewrote the full example so every detail comes from the writer's notes, and moved version history to this file.
+- README: opens with a before/after, the five strongest tells, and install steps for each agent. States that getting past AI detectors is not a goal. The full example's rewrite now keeps every fact from its draft and adds none. Version history moved to this file.
 
 ## 3.0.0
 
