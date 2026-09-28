@@ -75,8 +75,8 @@ These are the strongest and most frequent tells in current model prose. Act on o
 
 ### 2. One-line closers and dramatic fragments
 
-**Watch for:** a one-sentence paragraph that restates the paragraph before it; "That is the real win."; "That distinction matters."; "Read that again."; "Let that sink in."; the same closer after several sections; a row of fragments ("No aesthetic prior. No nostalgia."); one word in ALL CAPS or with periods between words (every. single. day.).
-**Problem:** The line asks the reader to pause on a claim instead of adding to it. One short sentence can carry emphasis when it carries a new fact. Cut a closer that repeats. Merge a row of fragments into a sentence with a specific claim.
+**Watch for:** a one-sentence paragraph that restates the paragraph before it; "That is the real win."; "That distinction matters."; "Read that again."; "Let that sink in."; the same closer after several sections; a sentence after an example, scene, or number that names what it showed ("This shows the importance of...", "The message was clear:", "It was a lesson in patience."); a row of fragments ("No aesthetic prior. No nostalgia."); one word in ALL CAPS or with periods between words (every. single. day.).
+**Problem:** The line asks the reader to pause on a claim instead of adding to it. One short sentence can carry emphasis when it carries a new fact. Cut a closer that repeats, including one that explains an example the reader just saw. Keep it when it adds a fact or consequence the example does not show. Merge a row of fragments into a sentence with a specific claim.
 **Before:**
 > Then AlphaEvolve arrived. It had no preference for symmetry. No aesthetic prior. No nostalgia for human taste. The old rules were gone.
 **After:**
