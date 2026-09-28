@@ -2,7 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/blader/humanizer?style=flat)](https://github.com/blader/humanizer/stargazers) [![skills.sh installs](https://skills.sh/b/blader/humanizer)](https://skills.sh/blader/humanizer)
 
-Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, Cursor, OpenCode, and any other agent that supports skills.
+Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, and any other agent that supports skills.
 
 **Before:**
 > I'm thrilled to announce that after months of hard work, our team has shipped something truly special — shared drafts. It's not just a feature; it's a fundamental shift in how teams collaborate. Now two people can edit the same doc at once, seamlessly. We built it because our own team kept emailing each other files named final_v7.docx. Let that sink in. 🚀
@@ -13,6 +13,18 @@ Humanizer makes AI-written text sound like a person wrote it, without changing w
 In a blind test, judges preferred Humanizer's rewrite over the original AI text 16 times out of 16 ([#229](https://github.com/blader/humanizer/issues/229)).
 
 Humanizer edits for human readers. Getting past AI detectors is not a goal, and detectors still flag most of its output.
+
+## The five strongest tells
+
+These are the most common signs of AI writing, and Humanizer rewrites any of them on sight:
+
+1. **Not X but Y:** "It's not just a feature, it's a shift."
+2. **One-line closers:** "Let that sink in."
+3. **Sayings that sound deep:** "At its core, what really matters is..."
+4. **A staged run-up:** "Here's the thing." "Honestly?"
+5. **Arguing with no one:** "I'm not saying X, but..."
+
+Humanizer checks for [26 patterns](#the-26-patterns) in all.
 
 ## Installation
 
@@ -31,20 +43,6 @@ The plugin answers to `/humanizer:humanizer`. It needs Claude Code 2.1.142 or ne
 
 ```bash
 npx skills add blader/humanizer --global --agent codex
-```
-
-### Cursor
-
-```bash
-npx skills add blader/humanizer --global --agent cursor
-```
-
-To load it as a Cursor plugin instead, copy or symlink this repository into `~/.cursor/plugins/local/humanizer` and reload Cursor.
-
-### OpenCode
-
-```bash
-npx skills add blader/humanizer --global --agent opencode
 ```
 
 ### Claude.ai and Claude Desktop
